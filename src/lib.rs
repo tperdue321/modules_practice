@@ -44,8 +44,11 @@ pub mod network;
 
 #[cfg(test)]
 mod tests {
+    // super goes up a one module
+    // can be good for accessing siblings easily
+    use super::client;
     #[test]
     fn it_works() {
-        assert_eq!(2 + 2, 4);
+        client::connect();
     }
 }
